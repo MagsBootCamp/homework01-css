@@ -1,10 +1,320 @@
 
+/* This is prescribing that across the whole html the box setting has no padding and no margin? 
+cos no margin doesnt make sense to me as I dont understand why the content-box size is not in here? Margins create space around and element,
+padding creates extra space within an element. The website looks like it has margins between divs...but this is because the classes within the html over-ride
+whats in the "*"???
+Now I've read more I think margin: 0; means that its applying 0 margin to all sides (having 1 value means apply to all sides).
+But I still dont get why its 0? Same thoughts for padding.  */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/* Element selectors - generic. 
+Can h1 be element....as has the SEO override...if that is for the word Horiseon?? */
+body {
+    background-color: #d9dcd6;
+}
+
+a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+/* Comment for all fonts...best practice not to use px? But I dont know how is best to fix this. */
+p {
+    font-size: 16px;
+}
+
+/* Specific .classes  */
+/* can the header aspects be combined? Whats the seo thing?
+I can see that its serach engine optimisation acronym but not sure why a class has been created? */
+.header {
+    padding: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: #2a607c;
+    color: #ffffff;
+}
+
+/* I think this is the Horiseon word in the Header box that has different font size (and colour?) than the other text? 
+SHould it therefore be an id (unique?) */
+.header h1 {
+    display: inline-block;
+    font-size: 48px;
+}
+
+.header h1 .seo {
+    color: #d9dcd6;
+}
+
+.header div {
+    padding-top: 15px;
+    margin-right: 20px;
+    float: right;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+}
+
+.header div ul {
+    list-style-type: none;
+}
+
+.header div ul li {
+    display: inline-block;
+    margin-left: 25px;
+}
+/*  */
+
+
+.hero {
+    height: 800px;
+    width: 100%;
+    margin-bottom: 25px;
+    background-image: url("../images/digital-marketing-meeting.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.float-left {
+    float: left;
+    margin-right: 25px;
+}
+
+.float-right {
+    float: right;
+    margin-left: 25px;
+}
+
+.content {
+    width: 75%;
+    display: inline-block;
+    margin-left: 20px;
+}
+
+
+/* I think we can combine common elements for the benefits components and therefore the clss element .benfits could have all three components?
+But I dont know how to bring them all together? */
+.benefits {
+    margin-right: 20px;
+    padding: 20px;
+    clear: both;
+    float: right;
+    width: 20%;
+    height: 100%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #2589bd;  
+}
+
+/* I think we can combine common elements for the margin nd color benefits components */
+.benefit-botmargandcolor {
+    margin-bottom: 32px;
+    color: #ffffff;
+}
+
+/* so the 3 benefits below for margin-bottom and color have been combined into the botmargandcolor class
+and I have changed the refernce in html to be the botmargandcolor class 
+ */
+.benefit-lead {
+    margin-bottom: 32px;
+    color: #ffffff;
+}
+
+.benefit-brand {
+    margin-bottom: 32px;
+    color: #ffffff;
+}
+
+.benefit-cost {
+    margin-bottom: 32px;
+    color: #ffffff;
+}
+/* the benefits above have been removed from the html file and replaced with the benefit-botmargandcolor class */
+
+
+
+/* I think we can combine common elements for the h3 benefits components */
+.benefit-h3botmarandtextalign {
+    margin-bottom: 10px;
+    text-align: center;  
+}
+/* so the 3 benefits below for margin-bottom and text-align for h3 have been combined into the h3botmarandtextalign class
+and I have changed the refernce in html to be the h3botmarandtextalign class or can it be an id (#)? or just h3 element?  */
+.benefit-lead h3 {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.benefit-brand h3 {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.benefit-cost h3 {
+    margin-bottom: 10px;
+    text-align: center;
+}
+/* the benefits above have been removed from the html file and replaced with the benefit-h3botmarandtextalign class */
+
+
+
+/* I think we can combine common elements for the img benefits components */
+.benefit-image {
+    display: block;
+    margin: 10px auto;
+    max-width: 150px;   
+}
+/* so the 3 benefits below for display, margin and max-width for the images have been combined into the benefit-image class
+and I have changed the reference in html to be the benefit-image class  */
+
+.benefit-lead img {
+    display: block;
+    margin: 10px auto;
+    max-width: 150px;
+}
+
+.benefit-brand img {
+    display: block;
+    margin: 10px auto;
+    max-width: 150px;
+}
+
+.benefit-cost img {
+    display: block;
+    margin: 10px auto;
+    max-width: 150px;
+}
+/* the benefits above have been removed from the html file and replaced with the benefit-h3botmarandtextalign class */
+
+
+/* Or should I bring them all together to describe all of the benefits attributes in one line? Viz have id= for each of
+""benfits", "benfits margin and max-width", "benefits margin bottom and text-align" and the "benfits images"
+ and have them in the one .class or style???? */
+.benefits {
+    margin-right: 20px;
+    padding: 20px;
+    clear: both;
+    float: right;
+    width: 20%;
+    height: 100%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #2589bd;
+/* dont know how to though */}
+
+
+
+
+/* Its the same for these */
+.search-engine-optimization {
+    margin-bottom: 20px;
+    padding: 50px;
+    height: 300px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #0072bb;
+    color: #ffffff;
+}
+
+.online-reputation-management {
+    margin-bottom: 20px;
+    padding: 50px;
+    height: 300px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #0072bb;
+    color: #ffffff;
+}
+
+.social-media-marketing {
+    margin-bottom: 20px;
+    padding: 50px;
+    height: 300px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #0072bb;
+    color: #ffffff;
+}
+/*    */
+
+
+/* Its the same for these */
+.search-engine-optimization img {
+    max-height: 200px;
+}
+
+.online-reputation-management img {
+    max-height: 200px;
+}
+
+.social-media-marketing img {
+    max-height: 200px;
+}
+/*    */
+
+
+/* Its the same for these too */
+.search-engine-optimization h2 {
+    margin-bottom: 20px;
+    font-size: 36px;
+}
+
+.online-reputation-management h2 {
+    margin-bottom: 20px;
+    font-size: 36px;
+}
+
+.social-media-marketing h2 {
+    margin-bottom: 20px;
+    font-size: 36px;
+}
+
+/* Should be able to put the footer requirements together too? */
+.footer {
+    padding: 30px;
+    clear: both;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+}
+
+.footer h2 {
+    font-size: 20px;
+}
+
+/* Real style sheet that will be handed up is below */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* This is prescribing that across the whole html the box setting has no padding and no margin? ASK TRENT
 cos no margin doesnt make sense to me as I dont understand why the content-box size is not in here? Margins create space around and element,
 padding creates extra space within an element. The website looks like it has margins between divs?
 Now I've read more I think margin: 0; means that its applying 0 margin to all sides (having 1 value means apply to all sides).
-But I still dont get why its 0? Same thoughts for padding  */
+But I still dont get why its 0? Same thoughts for padding.  */
 * {
     box-sizing: border-box;
     padding: 0;
@@ -94,6 +404,14 @@ p {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     background-color: #2589bd;
 }
+
+
+/* I think we can combine common elements for the benefits components */
+.benefit-botmargandcolor {
+    margin-bottom: 32px;
+    color: #ffffff;
+}
+
 
 .benefit-lead {
     margin-bottom: 32px;

@@ -16,4 +16,8 @@ Think about dooing this:
     Orange : #F46036;
 */
 
+CHANGES MADE
+Recommendation was to organise the stylesheet with a Top-Down structure - viz Generic classes: Header: Navmenu: Main content and make a comment on each section.
+
+
 

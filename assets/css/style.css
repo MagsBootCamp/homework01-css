@@ -1,17 +1,31 @@
 
-/* The * use is being universal and Im not sure what its doing in here - ASK TRENT */
 
-
+/* This is prescribing that across the whole html the box setting has no padding and no margin? ASK TRENT
+cos no margin doesnt make sense to me as I dont understand why the content-box size is not in here? Margins create space around and element,
+padding creates extra space within an element. The website looks like it has margins between divs?
+Now I've read more I think margin: 0; means that its applying 0 margin to all sides (having 1 value means apply to all sides).
+But I still dont get why its 0? Same thoughts for padding  */
 * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
 
+/* Element selectors - generic.  */
 body {
     background-color: #d9dcd6;
 }
 
+a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+p {
+    font-size: 16px;
+}
+
+/* Specific .classes  */
 .header {
     padding: 20px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -43,15 +57,6 @@ body {
 .header div ul li {
     display: inline-block;
     margin-left: 25px;
-}
-
-a {
-    color: #ffffff;
-    text-decoration: none;
-}
-
-p {
-    font-size: 16px;
 }
 
 .hero {
